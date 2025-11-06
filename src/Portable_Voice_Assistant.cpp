@@ -30,8 +30,6 @@ SimpleTimer - https://github.com/kiryanenko/SimpleTimer
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h>
 #include <SimpleTimer.h>
-#include <ESP_I2S.h>
-#include <wav_header.h>
 
 void speakTextInChunks(String text, int maxLength);
 void parseResponse(String response);
@@ -218,7 +216,7 @@ here:
         if (transcription == "") {
           led_RGB(0, 0, 255);
           if (TTS_MODEL == 1)
-            audio_play.openai_speech(OPENAI_KEY, "tts-1", again,"", "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
+            audio_play.openai_speech(OPENAI_KEY, "tts-1", again, "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
           else
             speakTextInChunks(again, 93);  // ( Uncomment this to use Google TTS )
           Serial.println("Please Ask Again");
@@ -279,7 +277,7 @@ here:
           Serial.println(filteredAnswer);
 
           if (TTS_MODEL == 1)
-            audio_play.openai_speech(OPENAI_KEY, "tts-1", filteredAnswer.c_str(),"", "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
+            audio_play.openai_speech(OPENAI_KEY, "tts-1", filteredAnswer.c_str(), "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
           else
             speakTextInChunks(filteredAnswer, 93);  // ( Uncomment this to use Google TTS )
         }
@@ -296,7 +294,7 @@ here:
     Serial.print("repeat - ");
     Serial.println(repeat);
     if (TTS_MODEL == 1)
-      audio_play.openai_speech(OPENAI_KEY, "tts-1", repeat,"", "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
+      audio_play.openai_speech(OPENAI_KEY, "tts-1", repeat, "shimmer", "mp3", "1");  //ONYX,shimmer,alloy (Uncomment this to use OpenAI TTS)
     else
       speakTextInChunks(repeat, 93);  // ( Uncomment this to use Google TTS )
   }
@@ -322,7 +320,7 @@ here:
     Serial.println(batteryVoltage);
     if (batteryVoltage < 3.4) {
       if (TTS_MODEL == 1)
-      audio_play.openai_speech(OPENAI_KEY, "tts-1", batt.c_str(),"", "shimmer", "mp3", "1");
+      audio_play.openai_speech(OPENAI_KEY, "tts-1", batt.c_str(), "shimmer", "mp3", "1");
       else
       speakTextInChunks(batt.c_str(), 93);  // ( Uncomment this to use Google TTS )
     }

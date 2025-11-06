@@ -13,8 +13,8 @@
 #include <Arduino.h>
 #include <FFat.h>
 #include <FS.h>
-#include <NetworkClient.h>
-#include <NetworkClientSecure.h>
+#include <WiFiClient.h>
+#include <WiFiClientSecure.h>
 #include <SD.h>
 #include <SD_MMC.h>
 #include <WiFi.h>
@@ -22,7 +22,7 @@
 #include <charconv>
 #include <codecvt>
 #include <deque>
-#include <driver/i2s_std.h>
+#include <driver/i2s.h>
 #include <esp32-hal-log.h>
 #include <functional>
 #include <libb64/cencode.h>
@@ -333,9 +333,9 @@ class Audio {
     } pid_array;
 
     File                m_audiofile;
-    NetworkClient       client;
-    NetworkClientSecure clientsecure;
-    NetworkClient*      m_client = nullptr;
+    WiFiClient          client;
+    WiFiClientSecure    clientsecure;
+    WiFiClient*         m_client = nullptr;
 
     SemaphoreHandle_t mutex_playAudioData;
     SemaphoreHandle_t mutex_audioTask;
