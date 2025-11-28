@@ -393,7 +393,7 @@ void parseResponse(String response) {
     // Serial.println("Clean JSON:");
     // Serial.println(jsonPart);
 
-    DynamicJsonDocument doc(1024);  // Increase size if needed
+    JsonDocument doc;
     DeserializationError error = deserializeJson(doc, jsonPart);
 
     if (error) {
@@ -402,12 +402,12 @@ void parseResponse(String response) {
       return;
     }
 
-    if (doc.containsKey("candidates")) {
+    if (doc["candidates"].is<JsonArray>()) {
       for (const auto& candidate : doc["candidates"].as<JsonArray>()) {
-        if (candidate.containsKey("content") && candidate["content"].containsKey("parts")) {
+        if (candidate["content"]["parts"].is<JsonArray>()) {
 
           for (const auto& part : candidate["content"]["parts"].as<JsonArray>()) {
-            if (part.containsKey("text")) {
+            if (part["text"].is<const char*>()) {
               text += part["text"].as<String>();
             }
           }
