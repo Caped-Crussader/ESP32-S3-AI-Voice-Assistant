@@ -2,9 +2,9 @@
 
 An AI-powered voice assistant running on the ESP32-S3, using an **INMP441** I2S microphone for audio capture and a **MAX98357** I2S amplifier for audio playback.
 
-<img width="1536" height="2048" alt="esp" src="https://github.com/user-attachments/assets/60f4b861-828a-40f8-ab1c-8188defb065f" />
+<img width="848" height="480" alt="gtcespvid - Trim - Trim" src="https://github.com/user-attachments/assets/c4a73acb-d0f5-408c-9ce4-00548dcc5805" />
 
-<img width="1536" height="2048" alt="espb" src="https://github.com/user-attachments/assets/7ecedc02-33b0-4340-be8d-65d3ef7e9fbc" />
+<img width="2332" height="1398" alt="espassi" src="https://github.com/user-attachments/assets/be5680ee-337b-443f-82bc-6fd1afcb6055" />
 
 ---
 
