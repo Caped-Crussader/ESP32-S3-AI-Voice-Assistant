@@ -6,6 +6,11 @@ An AI-powered voice assistant running on the ESP32-S3, using an **INMP441** I2S 
 
 <img width="2332" height="1398" alt="espassi" src="https://github.com/user-attachments/assets/be5680ee-337b-443f-82bc-6fd1afcb6055" />
 
+## Schematic
+
+<img width="1480" height="1027" alt="image" src="https://github.com/user-attachments/assets/bf1c3c40-e8fb-4ca7-bece-3b81ea00ac60" />
+
+
 ---
 
 ## Features
