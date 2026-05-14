@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "ESP32-S3-DEVKITC-1-N8R8") (type "KiCad") (uri "${KIPRJMOD}/library/ESP32-S3-DEVKITC-1-N8R8") (options "") (descr ""))
+	(lib (name "HT7833") (type "KiCad") (uri "${KIPRJMOD}/library/HT7833") (options "") (descr ""))
+)
